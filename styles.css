@@ -761,9 +761,31 @@ nav {
 
 @media (width < 600px) {
   .nav__links {
-    display: none;
+    display: block; /* or your preferred display style */
   }
 
+  @media screen {
+    
+  }
+  .nav__links {
+    display: flex; /* Use flexbox to align items in a row */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    overflow-x:auto; /* Allows horizontal scrolling if links exceed the width */
+  }
+  
+  .nav__links li {
+    margin-right: 15px; /* Space between links */
+  }
+  
+  @media (max-width: 600px) {
+    .nav__links {
+      font-size: 14px; /* Smaller font size for phones */
+    }
+  }
+  
+  
   .header__form form {
     flex-direction: column;
     align-items: flex-start;
